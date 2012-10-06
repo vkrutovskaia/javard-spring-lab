@@ -1,2 +1,2 @@
-spring-context-xml.lab
+spring-context-annotation.lab
 ======================
