@@ -20,33 +20,6 @@ public class ProposalInitializer {
     
     /** The seller service. */
     private SellerService sellerService;
-    
-    /**
-     * Sets the product service.
-     *
-     * @param productService the new product service
-     */
-    public void setProductService(ProductService productService) {
-        this.productService = productService;
-    }
-
-    /**
-     * Sets the proposal service.
-     *
-     * @param proposalService the new proposal service
-     */
-    public void setProposalService(ProposalService proposalService) {
-        this.proposalService = proposalService;
-    }
-
-    /**
-     * Sets the seller service.
-     *
-     * @param sellerService the new seller service
-     */
-    public void setSellerService(SellerService sellerService) {
-        this.sellerService = sellerService;
-    }
 
     /**
      * Inits the proposals.
