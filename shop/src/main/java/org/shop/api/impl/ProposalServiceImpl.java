@@ -23,14 +23,6 @@ public class ProposalServiceImpl implements ProposalService {
         super();
         this.repository = repository;
     }
-    
-    public void setSellerService(SellerService sellerService) {
-        this.sellerService = sellerService;
-    }
-
-    public void setProductService(ProductService productService) {
-        this.productService = productService;
-    }
 
     /* (non-Javadoc)
      * @see org.shop.api.ProposalService#createProposal(java.lang.Long, java.lang.Long, java.lang.Double)

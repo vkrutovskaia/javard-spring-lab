@@ -10,10 +10,6 @@ public class SellerServiceImpl implements SellerService {
     
     private SellerRepository repository;
 
-    public void setRepository(SellerRepository repository) {
-        this.repository = repository;
-    }
-
     /* (non-Javadoc)
      * @see org.shop.api.SellerService#getSellers()
      */

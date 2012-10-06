@@ -17,14 +17,6 @@ public class OrderServiceImpl implements OrderService {
     private OrderRepository orderRepository;
     
     private ItemService itemService;
-    
-    public void setOrderRepository(OrderRepository orderRepository) {
-        this.orderRepository = orderRepository;
-    }
-
-    public void setItemService(ItemService itemService) {
-        this.itemService = itemService;
-    }
 
     @Override
     public Long createOrder(User user, Item... items) {
