@@ -19,7 +19,7 @@ import org.shop.data.Entity;
 public class AbstractMapRepository<T extends Entity> {
     
     /** The sequence. */
-    private long sequence = 0;
+    protected long sequence = 0;
     
     protected final Map<Long, T> register = new HashMap<Long, T>();
     
