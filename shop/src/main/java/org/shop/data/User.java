@@ -1,11 +1,14 @@
 package org.shop.data;
 
 
+import org.springframework.stereotype.Component;
+
 /**
  * Entity of <code>User</code> class represents the user object.
  * 
  * @author Dzmitry_Naskou
  */
+@Component(value = "user")
 public class User implements Entity {
 
     private static final long serialVersionUID = 1199556401478769420L;

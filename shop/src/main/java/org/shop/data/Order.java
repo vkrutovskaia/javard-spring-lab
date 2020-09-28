@@ -1,6 +1,7 @@
 package org.shop.data;
 
 import java.util.Date;
+import org.springframework.stereotype.Component;
 
 /**
  * Entity of <code>Order</code> class represents the order object.
@@ -8,6 +9,7 @@ import java.util.Date;
  * @author Dzmitry_Naskou
  * @see Item
  */
+@Component(value = "order")
 public class Order implements Entity {
 
     private static final long serialVersionUID = -1964561045551043905L;

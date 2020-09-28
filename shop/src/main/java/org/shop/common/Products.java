@@ -1,5 +1,8 @@
 package org.shop.common;
 
+import org.springframework.stereotype.Component;
+
+@Component(value = "products")
 public final class Products {
 
     public static final String SAMSUNG_GALAXY_TAB = "Samsung Galaxy Tab";

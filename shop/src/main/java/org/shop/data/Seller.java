@@ -1,16 +1,19 @@
 package org.shop.data;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Entity of <code>Seller</code> class represents the seller object.
  * 
  * @author Dzmitry_Naskou
  */
+@Component(value = "seller")
 public class Seller implements Entity {
 
     private static final long serialVersionUID = -1560210215625020278L;
 
     private Long id;
-    
+
     private String name;
 
     @Override

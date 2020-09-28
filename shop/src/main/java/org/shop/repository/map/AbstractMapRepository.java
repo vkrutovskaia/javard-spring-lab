@@ -7,6 +7,9 @@ import java.util.Map;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.Predicate;
 import org.shop.data.Entity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
 
 /**
  * The Abstract Map Based Repository.
@@ -16,9 +19,12 @@ import org.shop.data.Entity;
  * 
  * @see Map
  */
+@Repository(value = "abstractRepository")
 public class AbstractMapRepository<T extends Entity> {
     
     /** The sequence. */
+
+    @Value("${initialSequence}")
     protected long sequence = 0;
     
     protected final Map<Long, T> register = new HashMap<Long, T>();

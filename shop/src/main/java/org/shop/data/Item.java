@@ -1,11 +1,14 @@
 package org.shop.data;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Entity of <code>Item</code> class represents the order item.
  * 
  * @author Dzmitry_Naskou
  * @see Order
  */
+@Component(value = "item")
 public class Item implements Entity {
 
     private static final long serialVersionUID = 2715339873182595898L;

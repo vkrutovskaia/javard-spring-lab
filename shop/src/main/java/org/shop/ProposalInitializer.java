@@ -7,18 +7,29 @@ import org.shop.api.SellerService;
 import org.shop.common.Products;
 import org.shop.data.Product;
 import org.shop.data.Seller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 /**
  * The Proposal Initializer util class.
  */
+@Component(value = "proposalInitializer")
 public class ProposalInitializer {
     
     /** The product service. */
+    @Autowired
+    @Qualifier(value = "productService")
     private ProductService productService;
     
     /** The proposal service. */
+    @Autowired
+    @Qualifier(value = "proposalService")
     private ProposalService proposalService;
     
     /** The seller service. */
+    @Autowired
+    @Qualifier(value = "sellerService")
     private SellerService sellerService;
 
     /**
