@@ -2,14 +2,12 @@ package org.shop.repository.map;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.commons.collections.Predicate;
 import org.shop.data.Product;
 import org.shop.repository.ProductRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository(value = "productRepository")
-public class ProductMapRepository extends AbstractMapRepository<Product> implements ProductRepository {
+public class ProductMapRepository extends AbstractMapRepository<Product> implements
+    ProductRepository {
 
     /* (non-Javadoc)
      * @see org.shop.repository.ProductRepository#getProductById(java.lang.Long)
@@ -18,7 +16,7 @@ public class ProductMapRepository extends AbstractMapRepository<Product> impleme
     public Product getProductById(Long productId) {
         return get(productId);
     }
-    
+
     /* (non-Javadoc)
      * @see org.shop.repository.ProductRepository#getProducts()
      */
@@ -26,7 +24,7 @@ public class ProductMapRepository extends AbstractMapRepository<Product> impleme
     public List<Product> getProducts() {
         return new ArrayList<Product>(register.values());
     }
-    
+
     /* (non-Javadoc)
      * @see org.shop.repository.ProductRepository#getProductsByName(java.lang.String)
      */
@@ -50,7 +48,7 @@ public class ProductMapRepository extends AbstractMapRepository<Product> impleme
     public void updateProduct(Product product) {
         update(product);
     }
-    
+
     /* (non-Javadoc)
      * @see org.shop.repository.ProductRepository#deleteProduct(java.lang.Long)
      */
@@ -58,8 +56,9 @@ public class ProductMapRepository extends AbstractMapRepository<Product> impleme
     public void deleteProduct(Long productId) {
         delete(productId);
     }
-    
+
     private class ProductByNamePredicate implements Predicate {
+
         private String name;
 
         private ProductByNamePredicate(String name) {
@@ -70,11 +69,11 @@ public class ProductMapRepository extends AbstractMapRepository<Product> impleme
         @Override
         public boolean evaluate(Object input) {
             if (input instanceof Product) {
-                Product product = (Product)input;
-                
+                Product product = (Product) input;
+
                 return name.equalsIgnoreCase(product.getName());
             }
-            
+
             return false;
         }
     }

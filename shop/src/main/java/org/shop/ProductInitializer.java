@@ -1,16 +1,12 @@
 package org.shop;
 
-import javax.management.ConstructorParameters;
 import org.shop.api.ProductService;
 import org.shop.common.Products;
 import org.shop.data.Product;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 /**
  * The Product Initializer util class.
  */
-@Component(value = "productInitializer")
 public final class ProductInitializer {
 
   /**
@@ -23,8 +19,7 @@ public final class ProductInitializer {
    *
    * @param productService the product service
    */
-    @ConstructorParameters("productService")
-    public ProductInitializer(ProductService productService) {
+  public ProductInitializer(ProductService productService) {
     super();
     this.productService = productService;
   }

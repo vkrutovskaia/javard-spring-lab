@@ -4,33 +4,32 @@ import java.util.ArrayList;
 import java.util.List;
 import org.shop.data.Seller;
 import org.shop.repository.SellerRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository(value = "sellerRepository")
-public final class SellerMapRepository extends AbstractMapRepository<Seller> implements SellerRepository {
-    
-    /* (non-Javadoc)
-     * @see org.shop.repository.SellerRepository#createOrUpdate(org.shop.data.Seller)
-     */
+public final class SellerMapRepository extends AbstractMapRepository<Seller> implements
+    SellerRepository {
 
-    @Override
-    public void createOrUpdateSeller(Seller seller) {
-        update(seller);
-    }
+  /* (non-Javadoc)
+   * @see org.shop.repository.SellerRepository#createOrUpdate(org.shop.data.Seller)
+   */
 
-    /* (non-Javadoc)
-     * @see org.shop.repository.SellerRepository#getSellers()
-     */
-    @Override
-    public List<Seller> getSellers() {
-        return new ArrayList<Seller>(register.values());
-    }
+  @Override
+  public void createOrUpdateSeller(Seller seller) {
+    update(seller);
+  }
 
-    /* (non-Javadoc)
-     * @see org.shop.repository.SellerRepository#getSellerById(java.lang.Long)
-     */
-    @Override
-    public Seller getSellerById(Long sellerId) {
-        return get(sellerId);
-    }
+  /* (non-Javadoc)
+   * @see org.shop.repository.SellerRepository#getSellers()
+   */
+  @Override
+  public List<Seller> getSellers() {
+    return new ArrayList<>(register.values());
+  }
+
+  /* (non-Javadoc)
+   * @see org.shop.repository.SellerRepository#getSellerById(java.lang.Long)
+   */
+  @Override
+  public Seller getSellerById(Long sellerId) {
+    return get(sellerId);
+  }
 }

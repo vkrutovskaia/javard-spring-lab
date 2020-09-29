@@ -6,11 +6,11 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("org.shop.repository.factory")
 public class FactoryConfig {
 
-//  @Bean
-//  public UserRepositoryFactory userRepositoryFactory() {
-//    return new UserRepositoryFactory();
-//  }
+  @Bean
+  public UserRepositoryFactory userRepositoryFactory() {
+    UserRepositoryFactory userRepositoryFactory = new UserRepositoryFactory();
+    return userRepositoryFactory;
+  }
 }

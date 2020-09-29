@@ -11,13 +11,12 @@ import org.shop.data.Proposal;
 import org.shop.data.User;
 import org.shop.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service(value = "orderService")
 public class OrderServiceImpl implements OrderService {
 
   @Autowired
   private OrderRepository orderRepository;
+
   @Autowired
   private ItemService itemService;
 
@@ -40,7 +39,7 @@ public class OrderServiceImpl implements OrderService {
   }
 
   public Long createOrder(User user, Proposal... proposals) {
-    List<Item> items = new ArrayList<Item>();
+    List<Item> items = new ArrayList<>();
 
     for (Proposal proposal : proposals) {
       Item item = new Item();

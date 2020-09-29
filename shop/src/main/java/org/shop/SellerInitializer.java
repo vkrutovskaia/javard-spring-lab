@@ -7,14 +7,10 @@ import java.util.Map;
 import org.shop.api.SellerService;
 import org.shop.data.Seller;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
 /**
  * The Seller Initializer util class.
  */
-@Component(value = "sellerInitializer")
 public class SellerInitializer {
 
   /**
@@ -22,18 +18,18 @@ public class SellerInitializer {
    */
   @Autowired
   private SellerService sellerService;
+
   /**
    * The seller names.
    */
-  private Map<Long, String> sellerNames;
+  @Autowired
+  private Map<Long, String> sellerNames = Collections.emptyMap();
 
-  public SellerInitializer(Map<Long, String> sellerNames) {
-    this.sellerNames = sellerNames;
-  }
 
   /**
    * Inits the sellers.
    */
+
   public void initSellers() {
     List<Seller> sellers = new LinkedList<>();
 

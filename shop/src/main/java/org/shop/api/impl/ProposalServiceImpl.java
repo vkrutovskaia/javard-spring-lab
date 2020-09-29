@@ -10,32 +10,19 @@ import org.shop.data.Seller;
 import org.shop.data.State;
 import org.shop.repository.ProposalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-@Service(value = "proposalService")
+@Service
 public class ProposalServiceImpl implements ProposalService {
-
 
   private final ProposalRepository repository;
 
+  @Autowired
   private SellerService sellerService;
 
+  @Autowired
   private ProductService productService;
 
-  @Autowired
-  @Qualifier(value = "sellerService")
-  public void setSellerService(SellerService sellerService) {
-    this.sellerService = sellerService;
-  }
-
-  @Autowired
-  @Qualifier(value = "productService")
-  public void setProductService(ProductService productService) {
-    this.productService = productService;
-  }
-
-  @Autowired
   public ProposalServiceImpl(ProposalRepository repository) {
     super();
     this.repository = repository;
