@@ -22,8 +22,7 @@ public class BeansConfig {
 
   @Bean
   public InjectRandomIntAnnotationBeanPostProcessor injectRandomIntAnnotationBeanPostProcessor(){
-    InjectRandomIntAnnotationBeanPostProcessor injectRandomIntAnnotationBeanPostProcessor = new InjectRandomIntAnnotationBeanPostProcessor();
-    return  injectRandomIntAnnotationBeanPostProcessor;
+    return new InjectRandomIntAnnotationBeanPostProcessor();
   }
 
   @Bean("quoterBean")
@@ -33,7 +32,6 @@ public class BeansConfig {
 
   @Bean("logaspect")
   public LoggingAspect loggingAspect(){
-    LoggingAspect loggingAspect = new LoggingAspect();
-    return  loggingAspect;
+    return new LoggingAspect();
   }
 }

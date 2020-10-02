@@ -17,31 +17,26 @@ public class InitializerConfig {
 
   @Bean(initMethod = "initData")
   public DataInitializer dataInitializer() {
-    DataInitializer dataInitializer = new DataInitializer();
-    return dataInitializer;
+    return new DataInitializer();
   }
 
   @Bean
   public ProductInitializer productInitializer(ProductService productService) {
-    ProductInitializer productInitializer = new ProductInitializer(productService);
-    return productInitializer;
+    return new ProductInitializer(productService);
   }
 
   @Bean
   public ProposalInitializer proposalInitializer() {
-    ProposalInitializer proposalInitializer = new ProposalInitializer();
-    return proposalInitializer;
+    return new ProposalInitializer();
   }
 
   @Bean
   public SellerInitializer sellerInitializer() {
-    SellerInitializer sellerInitializer = new SellerInitializer();
-    return sellerInitializer;
+    return new SellerInitializer();
   }
 
   @Bean
   public UserInitializer userInitializer(UserService userService) {
-    UserInitializer userInitializer = new UserInitializer(userService);
-    return userInitializer;
+    return new UserInitializer(userService);
   }
 }
